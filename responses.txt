@@ -1,0 +1,127 @@
+Get: http://localhost:3000/api/communications?where[status][equals]=pending&depth=1
+
+{
+    "docs": [
+        {
+            "id": "69f23658f945ef0ce746eb51",
+            "subject": "test1",
+            "tos": [
+                {
+                    "relationTo": "users",
+                    "value": {
+                        "id": "69f23632f945ef0ce746eb32",
+                        "firstName": "Fateme",
+                        "lastName": "Hemmati",
+                        "roles": [
+                            "public"
+                        ],
+                        "apiKey": null,
+                        "email": "fatemehemmati7899@gmail.com",
+                        "createdAt": "2026-04-29T16:47:46.515Z",
+                        "updatedAt": "2026-04-29T16:47:57.709Z",
+                        "loginAttempts": 0
+                    }
+                }
+            ],
+            "body": [
+                {
+                    "children": [
+                        {
+                            "text": "testt"
+                        }
+                    ]
+                }
+            ],
+            "createdAt": "2026-04-29T16:48:24.094Z",
+            "updatedAt": "2026-04-29T16:48:24.103Z",
+            "status": "pending"
+        }
+    ],
+    "totalDocs": 1,
+    "limit": 10,
+    "totalPages": 1,
+    "page": 1,
+    "pagingCounter": 1,
+    "hasPrevPage": false,
+    "hasNextPage": false,
+    "prevPage": null,
+    "nextPage": null
+}
+
+Get http://localhost:3000/api/communications/69f23658f945ef0ce746eb51?depth=1
+
+{
+    "id": "69f23658f945ef0ce746eb51",
+    "subject": "test1",
+    "tos": [
+        {
+            "relationTo": "users",
+            "value": {
+                "id": "69f23632f945ef0ce746eb32",
+                "firstName": "Fateme",
+                "lastName": "Hemmati",
+                "roles": [
+                    "public"
+                ],
+                "apiKey": null,
+                "email": "fatemehemmati7899@gmail.com",
+                "createdAt": "2026-04-29T16:47:46.515Z",
+                "updatedAt": "2026-04-29T16:47:57.709Z",
+                "loginAttempts": 0
+            }
+        }
+    ],
+    "body": [
+        {
+            "children": [
+                {
+                    "text": "testt"
+                }
+            ]
+        }
+    ],
+    "createdAt": "2026-04-29T16:48:24.094Z",
+    "updatedAt": "2026-04-29T16:48:24.103Z",
+    "status": "pending"
+}
+
+
+PAtch //to add
+
+{
+    "message": "Updated successfully.",
+    "doc": {
+        "id": "69f23658f945ef0ce746eb51",
+        "subject": "test1",
+        "tos": [
+            {
+                "relationTo": "users",
+                "value": {
+                    "id": "69f23632f945ef0ce746eb32",
+                    "firstName": "Fateme",
+                    "lastName": "Hemmati",
+                    "roles": [
+                        "public"
+                    ],
+                    "apiKey": null,
+                    "email": "fatemehemmati7899@gmail.com",
+                    "createdAt": "2026-04-29T16:47:46.515Z",
+                    "updatedAt": "2026-04-29T16:47:57.709Z",
+                    "loginAttempts": 0
+                }
+            }
+        ],
+        "body": [
+            {
+                "children": [
+                    {
+                        "text": "testt"
+                    }
+                ]
+            }
+        ],
+        "createdAt": "2026-04-29T16:48:24.094Z",
+        "updatedAt": "2026-04-29T17:17:05.635Z",
+        "status": "sent"
+    }
+}
